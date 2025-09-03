@@ -6,16 +6,15 @@
 }
 
 :root {
-    --primary-color: #2563eb; /* Azul primário */
-    --primary-dark: #1d4ed8; /* Azul mais escuro */
-    --secondary-color: #f59e0b; /* Laranja/Dourado (Âmbar) */
-    --accent-color: #ef4444; /* Vermelho (se for usar) */
-    --text-color: #1f2937;
-    --text-light: #6b7280;
+    --primary-color: #0d47a1; /* Azul Profundo */
+    --primary-dark: #00227a; /* Azul ainda mais escuro */
+    --secondary-color: #ffb300; /* Dourado/Âmbar Vibrante */
+    --text-color: #212121;
+    --text-light: #616161;
     --background: #ffffff;
-    --background-alt: #f9fafb;
-    --background-dark: #111827;
-    --border-color: #e5e7eb;
+    --background-alt: #f5f5f5;
+    --background-dark: #1a237e; /* Azul escuro quase roxo para footer */
+    --border-color: #e0e0e0;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --transition: all 0.3s ease;
@@ -79,6 +78,7 @@ section {
     text-align: center;
     margin-bottom: 1rem;
     position: relative;
+    color: var(--primary-dark); /* Títulos em azul escuro */
 }
 
 .section-title::after {
@@ -89,7 +89,7 @@ section {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: var(--primary-color);
+    background: var(--secondary-color); /* Dourado nos subtítulos */
     border-radius: 2px;
 }
 
@@ -114,12 +114,12 @@ section {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color); /* Botão primário dourado */
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
+    background-color: #ffc107; /* Dourado mais claro no hover */
     color: white;
     transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
@@ -158,7 +158,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.98); /* Fundo mais opaco */
     box-shadow: var(--shadow);
     z-index: 1000;
     padding: 1rem 0;
@@ -171,7 +171,7 @@ section {
 }
 
 .logo img {
-    height: 50px;
+    height: 60px; /* Logo um pouco maior */
 }
 
 .nav-menu ul {
@@ -191,8 +191,8 @@ section {
     bottom: -5px;
     left: 0;
     width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
+    height: 3px; /* Linha um pouco mais grossa */
+    background-color: var(--secondary-color); /* Dourado na linha hover */
     transition: var(--transition);
 }
 
@@ -224,6 +224,7 @@ section {
     padding: 10rem 0 5rem;
     color: white;
     overflow: hidden;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); /* Gradiente azul */
 }
 
 .hero-background {
@@ -232,40 +233,36 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    /* Novo padrão de SVG mais dinâmico e sutil */
+    background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="%23ffffff" fill-opacity="0.1" d="M0 0h100v100H0zM50 0c-27.614 0-50 22.386-50 50s22.386 50 50 50 50-22.386 50-50S77.614 0 50 0zM10 50a40 40 0 1 1 80 0 40 40 0 1 1-80 0z"/></svg>');
+    background-size: 200px 200px; /* Tamanho do padrão */
+    background-blend-mode: overlay; /* Modo de mesclagem para o padrão */
     z-index: -2;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Pattern de formas orgânicas suaves para dar um toque tecnológico sem ser agressivo */
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-    background-size: cover;
-    z-index: -1;
-}
 
 .hero-content {
-    max-width: 650px;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     margin-bottom: 1.5rem;
+    color: white;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 2.5rem;
     opacity: 0.9;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
 /* About Section */
@@ -294,6 +291,7 @@ section {
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
+    justify-content: center;
 }
 
 .stat {
@@ -304,7 +302,7 @@ section {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--secondary-color); /* Números em dourado */
     margin-bottom: 0.5rem;
 }
 
@@ -313,142 +311,70 @@ section {
     color: var(--text-light);
 }
 
-/* Call to Action Overlay (Nova Seção) */
-.call-to-action-overlay {
+/* Nova Seção: Transparent Image Section */
+.transparent-image-section {
     position: relative;
-    padding: 6rem 0;
+    padding: 7rem 0; /* Mais padding para destaque */
     color: white;
     text-align: center;
     overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed; /* Efeito parallax */
 }
 
-.overlay-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* Azul para Laranja/Dourado */
-    z-index: -2;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="25" cy="25" r="15" fill="%23ffffff" fill-opacity="0.05"/><circle cx="75" cy="75" r="15" fill="%23ffffff" fill-opacity="0.05"/><circle cx="75" cy="25" r="10" fill="%23ffffff" fill-opacity="0.03"/><circle cx="25" cy="75" r="10" fill="%23ffffff" fill-opacity="0.03"/></svg>'); /* Adiciona um padrão de círculos sutis */
-    background-size: 200px 200px; /* Ajusta o tamanho do padrão */
-    opacity: 0.9; /* Opacidade do fundo com gradiente e pattern */
-}
-
-.overlay-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.overlay-content h2 {
-    font-size: 2.8rem;
-    margin-bottom: 1.5rem;
-}
-
-.overlay-content p {
-    font-size: 1.1rem;
-    margin-bottom: 2.5rem;
-    opacity: 0.9;
-}
-
-/* Services Section */
-.service-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.card-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-/* Technologies Section */
-.technologies {
-    background-color: var(--background-alt);
-}
-
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.tech-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
-.tech-item img {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
-}
-
-.tech-item span {
-    font-weight: 600;
-}
-
-/* Benefits Section */
-.benefits {
-    position: relative; /* Necessário para o overlay */
-    overflow: hidden; /* Garante que o SVG de fundo não vaze */
-    padding-top: 6rem; /* Ajuste para o padding, se necessário */
-    padding-bottom: 6rem; /* Ajuste para o padding, se necessário */
-}
-
-.benefits::before {
+.transparent-image-section::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23e0e7ff" fill-opacity="0.3" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,229.3C840,235,960,213,1080,192C1200,171,1320,149,1380,138.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>') no-repeat top center; /* Uma onda sutil no topo */
-    background-size: cover;
-    opacity: 0.5; /* Suaviza a imagem de fundo */
-    z-index: -1;
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-    position: relative; /* Para que o conteúdo fique acima do background */
+    background: rgba(0, 0, 0, 0.6); /* Overlay escuro para contraste do texto */
     z-index: 1;
 }
 
-.benefit-item {
-    text-align: center;
-    padding: 2rem 1.5rem;
+.transparent-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.benefit-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+.transparent-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color); /* Título em dourado */
+}
+
+.transparent-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Específicos para cada seção de imagem transparente */
+.section-one {
+    background-image: url('server-room-bg.jpg'); /* Imagem de sala de servidor */
+}
+
+.section-two {
+    background-image: url('security-bg.jpg'); /* Imagem de segurança/rede */
+}
+
+/* Services Section */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card-icon {
+    font-size: 2.8rem; /* Ícones maiores */
+    color: var(--secondary-color); /* Ícones em dourado */
     margin-bottom: 1rem;
-}
-
-.benefit-item h4 {
-    margin-bottom: 0.5rem;
 }
 
 /* Testimonials Section */
@@ -457,8 +383,11 @@ section {
     color: white;
 }
 
+.testimonials .section-title {
+    color: white;
+}
 .testimonials .section-title::after {
-    background: white;
+    background: var(--secondary-color);
 }
 
 .testimonials-slider {
@@ -469,11 +398,11 @@ section {
 }
 
 .testimonial {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15); /* Um pouco mais visível */
+    backdrop-filter: blur(8px); /* Blur mais suave */
     border-radius: 12px;
     padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .testimonial-content {
@@ -483,12 +412,12 @@ section {
 
 .testimonial-author h5 {
     margin-bottom: 0.2rem;
-    color: white;
+    color: var(--secondary-color); /* Nome do autor em dourado */
 }
 
 .testimonial-author span {
     font-size: 0.9rem;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 /* Contact Section */
@@ -513,15 +442,15 @@ section {
 }
 
 .contact-icon {
-    width: 50px;
-    height: 50px;
+    width: 55px; /* Ícones maiores */
+    height: 55px;
     background-color: var(--primary-color);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .contact-details h4 {
@@ -530,13 +459,13 @@ section {
 
 .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     margin-top: 2rem;
 }
 
 .social-links a {
-    width: 40px;
-    height: 40px;
+    width: 45px; /* Botões maiores */
+    height: 45px;
     background-color: var(--primary-color);
     color: white;
     border-radius: 50%;
@@ -544,6 +473,7 @@ section {
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    font-size: 1.2rem;
 }
 
 .social-links a:hover {
@@ -559,7 +489,7 @@ section {
 
 /* Footer */
 .footer {
-    background-color: var(--background-dark);
+    background-color: var(--background-dark); /* Fundo azul escuro */
     color: white;
     padding: 4rem 0 0;
 }
@@ -571,7 +501,7 @@ section {
 }
 
 .footer-section h4 {
-    color: white;
+    color: var(--secondary-color); /* Títulos do footer em dourado */
     margin-bottom: 1.5rem;
     position: relative;
 }
@@ -583,7 +513,7 @@ section {
     left: 0;
     width: 40px;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     border-radius: 2px;
 }
 
@@ -592,7 +522,7 @@ section {
 }
 
 .footer-section a {
-    color: #d1d5db;
+    color: #bdbdbd; /* Links mais claros */
     transition: var(--transition);
 }
 
@@ -601,7 +531,7 @@ section {
 }
 
 .footer-section p {
-    color: #d1d5db;
+    color: #bdbdbd;
     margin-bottom: 0.8rem;
     display: flex;
     align-items: center;
@@ -609,11 +539,11 @@ section {
 }
 
 .footer-bottom {
-    border-top: 1px solid #374151;
+    border-top: 1px solid #3f51b5; /* Borda um pouco mais clara */
     padding: 1.5rem 0;
     margin-top: 3rem;
     text-align: center;
-    color: #9ca3af;
+    color: #9fa8da;
 }
 
 /* WhatsApp Button */
@@ -659,6 +589,10 @@ section {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+
+    .transparent-content h2 {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -694,7 +628,7 @@ section {
     
     .hero-buttons {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
     
     .about-stats {
@@ -713,7 +647,11 @@ section {
         display: none;
     }
 
-    .overlay-content h2 {
+    .transparent-image-section {
+        background-attachment: scroll; /* Desativa parallax em mobile */
+    }
+
+    .transparent-content h2 {
         font-size: 2rem;
     }
 }
@@ -739,7 +677,7 @@ section {
         padding: 3rem 0;
     }
 
-    .overlay-content h2 {
+    .transparent-content h2 {
         font-size: 1.8rem;
     }
 }
@@ -771,24 +709,4 @@ section {
     html {
         scroll-behavior: auto;
     }
-}
-
-/* Modo escuro opcional (pode ser ativado com JavaScript) */
-.dark-mode {
-    --text-color: #f3f4f6;
-    --text-light: #d1d5db;
-    --background: #111827;
-    --background-alt: #1f2937;
-    --border-color: #374151;
-}
-
-.dark-mode .card,
-.dark-mode .tech-item {
-    background: #1f2937;
-    color: #f3f4f6;
-}
-
-/* Otimizações de SEO (microdados) */
-.organization-info {
-    display: none;
 }
