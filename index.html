@@ -72,12 +72,23 @@
                         </div>
                         <div class="stat">
                             <span class="stat-number" data-count="98">0</span>
-                            <span class="stat-label">% de Satisfação</span>
+                            <span class="stat-label">Satisfação</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
                     <img src="tecnologia-informatica.jpg" alt="Equipe de especialistas em informática da TechSolutions">
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action-overlay">
+            <div class="overlay-background"></div>
+            <div class="container">
+                <div class="overlay-content">
+                    <h2>Pronto para Otimizar Sua Infraestrutura?</h2>
+                    <p>Nossa equipe está pronta para implementar as melhores práticas e tecnologias para o seu ambiente. Fale conosco!</p>
+                    <a href="#contato" class="btn btn-primary">Agendar Consultoria</a>
                 </div>
             </div>
         </section>
@@ -423,7 +434,7 @@
         }, observerOptions);
 
         // Observar elementos para animação
-        document.querySelectorAll('.about-stats, .card, .tech-item, .benefit-item, .testimonial').forEach(el => {
+        document.querySelectorAll('.about-stats, .card, .tech-item, .benefit-item, .testimonial, .call-to-action-overlay').forEach(el => {
             observer.observe(el);
         });
     </script>
