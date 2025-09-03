@@ -1,186 +1,398 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços de Informática | Suporte Técnico, Redes e Desenvolvimento</title>
-    <meta name="description" content="Assistência técnica em informática, manutenção de computadores, redes, formatação, sites e soluções digitais modernas para empresas e residências.">
-    <meta name="keywords" content="informática, manutenção de computadores, suporte técnico, redes, formatação, criação de sites, soluções digitais, TI, Caldas Novas">
+    <title>TechSolutions | Serviços de Informática Profissionais e Suporte Técnico</title>
+    <meta name="description" content="TechSolutions: serviços completos de informática, suporte técnico, manutenção de computadores, redes, segurança digital e soluções em TI para empresas e residências.">
+    <meta name="keywords" content="serviços de informática, suporte técnico, manutenção de computadores, redes de computadores, segurança digital, assistência técnica, TI, reparo de computadores">
     <meta name="robots" content="index, follow">
-
+    <meta name="author" content="TechSolutions">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-
-    <!-- HEADER -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="#home"><img src="logo.png" alt="Logo Serviços de Informática"></a>
+                <a href="#home">
+                    <img src="logo-techsolutions.png" alt="TechSolutions - Serviços de Informática">
+                </a>
             </div>
-            <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="#home">Início</a></li>
                     <li><a href="#sobre">Sobre Nós</a></li>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#vantagens">Vantagens</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Soluções em Informática para Você e Sua Empresa</h1>
-                <p>Manutenção de computadores, redes, segurança digital e desenvolvimento de sites com atendimento ágil e personalizado.</p>
-                <a href="https://wa.me/5564999999999" class="btn" target="_blank">Fale Conosco no WhatsApp</a>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
             </div>
-        </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section id="sobre" class="about">
-        <div class="container about-flex">
-            <div class="about-image">
-                <img src="informatica.jpg" alt="Profissional de informática trabalhando">
-            </div>
-            <div class="about-content">
-                <h2>Sobre Nós</h2>
-                <p>Somos especialistas em **informática e tecnologia**, oferecendo suporte para residências e empresas. Trabalhamos com manutenção de computadores, instalação de redes, soluções de backup e criação de sites modernos e otimizados.</p>
-                <p>Nosso compromisso é entregar agilidade, confiança e inovação, garantindo que você tenha sempre as melhores soluções digitais para o seu dia a dia.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="services">
-        <div class="container">
-            <h2 class="section-title">Nossos Serviços</h2>
-            <div class="service-cards">
-                <div class="card">
-                    <i class="fas fa-laptop-medical icon"></i>
-                    <h4>Manutenção de Computadores</h4>
-                    <p>Formatação, upgrades, remoção de vírus e otimização de desempenho.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-network-wired icon"></i>
-                    <h4>Redes e Conectividade</h4>
-                    <p>Instalação e configuração de redes cabeadas e Wi-Fi seguras e rápidas.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-globe icon"></i>
-                    <h4>Criação de Sites</h4>
-                    <p>Desenvolvimento de sites modernos, responsivos e otimizados para SEO.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-cloud icon"></i>
-                    <h4>Backup e Segurança</h4>
-                    <p>Proteção de dados com soluções em nuvem e recuperação de arquivos.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-headset icon"></i>
-                    <h4>Suporte Técnico</h4>
-                    <p>Atendimento remoto e presencial para resolver problemas de TI com rapidez.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DIFERENCIAIS -->
-    <section id="diferenciais" class="why-choose-us">
-        <div class="container">
-            <h2 class="section-title">Por que escolher nossos serviços?</h2>
-            <div class="benefits-cards">
-                <div class="card">
-                    <i class="fas fa-clock icon"></i>
-                    <h4>Atendimento Rápido</h4>
-                    <p>Resolvemos problemas de forma ágil, minimizando o tempo de inatividade.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-shield-alt icon"></i>
-                    <h4>Segurança Garantida</h4>
-                    <p>Utilizamos as melhores práticas para proteger seus dados e equipamentos.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-user-check icon"></i>
-                    <h4>Suporte Personalizado</h4>
-                    <p>Cada cliente é único. Oferecemos soluções sob medida para cada necessidade.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p>Precisa de suporte em informática? Entre em contato agora mesmo!</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Rua Central, 123 - Caldas Novas - GO</p>
-                    <p><i class="fas fa-phone-alt"></i> (64) 99999-9999</p>
-                    <p><i class="fas fa-envelope"></i> contato@informatica.com.br</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Soluções em Tecnologia e Informática</h1>
+                    <p>Oferecemos serviços especializados em TI para maximizar a performance dos seus equipamentos e garantir a segurança dos seus dados.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5564992867359" class="btn btn-primary" target="_blank" rel="noopener">Solicitar Orçamento</a>
+                        <a href="#servicos" class="btn btn-secondary">Nossos Serviços</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
+        <section id="sobre" class="about">
+            <div class="container about-flex">
+                <div class="about-content">
+                    <h2>Sobre a TechSolutions</h2>
+                    <p>A <strong>TechSolutions</strong> é uma empresa especializada em serviços de informática, focada em oferecer soluções tecnológicas completas para empresas e usuários domésticos. Nossa missão é simplificar a tecnologia para nossos clientes, garantindo que seus sistemas operem com máxima eficiência e segurança.</p>
+                    <p>Com uma equipe de técnicos certificados e experientes, oferecemos desde manutenção corretiva até implementação de soluções tecnológicas avançadas. Atuamos em todo o território nacional com suporte remoto e presencial quando necessário.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="500">0</span>
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="1200">0</span>
+                            <span class="stat-label">Serviços Prestados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="98">0</span>
+                            <span class="stat-label">% de Satisfação</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="tecnologia-informatica.jpg" alt="Equipe de especialistas em informática da TechSolutions">
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="services">
+            <div class="container">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Soluções completas em tecnologia para seu negócio e uso pessoal</p>
+                
+                <div class="service-cards">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h4>Manutenção de Computadores</h4>
+                        <p>Manutenção preventiva e corretiva para desktops e notebooks, formatação, limpeza interna e otimização de desempenho.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4>Infraestrutura de Redes</h4>
+                        <p>Instalação, configuração e manutenção de redes cabeadas e wireless, garantindo conectividade estável e segura.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Segurança Digital</h4>
+                        <p>Proteção contra vírus, malware e ransomwares, implementação de firewalls e políticas de segurança de dados.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>Backup em Nuvem</h4>
+                        <p>Soluções de backup automatizado para proteger seus dados importantes contra perdas acidentais.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Recuperação de Dados</h4>
+                        <p>Recuperação de arquivos excluídos acidentalmente ou perdidos devido a falhas em HDs e SSDs.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>Suporte Técnico Remoto</h4>
+                        <p>Atendimento rápido e eficiente via acesso remoto para resolver problemas sem necessidade de deslocamento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tecnologias" class="technologies">
+            <div class="container">
+                <h2 class="section-title">Tecnologias que Trabalhamos</h2>
+                <p class="section-subtitle">Especialistas nas principais plataformas e ferramentas do mercado</p>
+                
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <img src="windows-logo.png" alt="Microsoft Windows">
+                        <span>Windows</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="linux-logo.png" alt="Linux">
+                        <span>Linux</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="apple-logo.png" alt="Apple macOS">
+                        <span>macOS</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="office-logo.png" alt="Microsoft Office">
+                        <span>Office</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="cisco-logo.png" alt="Cisco">
+                        <span>Cisco</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="vmware-logo.png" alt="VMware">
+                        <span>VMware</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vantagens" class="benefits">
+            <div class="container">
+                <h2 class="section-title">Por que Escolher a TechSolutions?</h2>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Atendimento Rápido</h4>
+                        <p>Tempo médio de resposta de menos de 1 hora para urgências.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Técnicos Certificados</h4>
+                        <p>Profissionais com certificações Microsoft, Cisco e CompTIA.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Ferramentas Modernas</h4>
+                        <p>Utilizamos equipamentos de diagnóstico de última geração.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4>Preços Justos</h4>
+                        <p>Orçamentos transparentes sem cobranças de taxas escondidas.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Garantia nos Serviços</h4>
+                        <p>Todos os nossos serviços têm garantia de 90 dias.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Atendimento em Domicílio</h4>
+                        <p>Serviços presenciais em toda a região com agendamento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">O que Nossos Clientes Dizem</h2>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Excelente serviço! Resolveram meu problema de rede em poucas horas. Super recomendo!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h5>Carlos Silva</h5>
+                            <span>Empresário</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Atendimento rápido e eficiente. Preços justos e transparentes. Já indiquei para vários amigos."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h5>Mariana Oliveira</h5>
+                            <span>Arquiteta</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Recuperaram todos os meus dados importantes de um HD corrompido. Serviço de qualidade!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h5>Roberto Santos</h5>
+                            <span>Advogado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Estamos prontos para resolver seus problemas de informática</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefone</h4>
+                                <p>(64) 99286-7359</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>E-mail</h4>
+                                <p>contato@techsolutions.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Localização</h4>
+                                <p>Av. Tecnológica, 123 - Centro, Caldas Novas - GO</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="form-contato">
+                            <div class="form-group">
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+                            </div>
+                            <div class="form-group">
+                                <select id="servico" name="servico" required>
+                                    <option value="">Selecione o serviço desejado</option>
+                                    <option value="manutencao">Manutenção de Computadores</option>
+                                    <option value="redes">Infraestrutura de Redes</option>
+                                    <option value="seguranca">Segurança Digital</option>
+                                    <option value="backup">Backup em Nuvem</option>
+                                    <option value="recuperacao">Recuperação de Dados</option>
+                                    <option value="suporte">Suporte Técnico</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="mensagem" name="mensagem" placeholder="Descreva seu problema ou necessidade" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Solicitar Atendimento</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-info">
-                <h4>Serviços de Informática</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Rua Central, 123 - Caldas Novas - GO</p>
-                <p><i class="fas fa-phone-alt"></i> (64) 99999-9999</p>
-                <p><i class="fas fa-envelope"></i> contato@informatica.com.br</p>
+            <div class="footer-section">
+                <h4>TechSolutions</h4>
+                <p>Sua parceira em soluções de tecnologia e informática. Oferecemos serviços profissionais para garantir o melhor desempenho dos seus equipamentos.</p>
             </div>
-            <div class="footer-links">
-                <h4>Links Úteis</h4>
+            
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
                 <ul>
                     <li><a href="#home">Início</a></li>
                     <li><a href="#sobre">Sobre Nós</a></li>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
-            <div class="footer-social">
-                <h4>Siga-nos</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+            
+            <div class="footer-section">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#servicos">Manutenção de Computadores</a></li>
+                    <li><a href="#servicos">Infraestrutura de Redes</a></li>
+                    <li><a href="#servicos">Segurança Digital</a></li>
+                    <li><a href="#servicos">Recuperação de Dados</a></li>
+                    <li><a href="#servicos">Suporte Técnico</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Tecnológica, 123 - Centro, Caldas Novas - GO</p>
+                <p><i class="fas fa-phone"></i> (64) 99286-7359</p>
+                <p><i class="fas fa-envelope"></i> contato@techsolutions.com.br</p>
             </div>
         </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2025 Serviços de Informática. Todos os direitos reservados.</p>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 TechSolutions. Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- BOTÃO WHATSAPP -->
-    <a href="https://wa.me/5564999999999" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/5564992867359" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Entrar em contato via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
-        document.querySelectorAll('.nav-menu a').forEach(item => {
-            item.addEventListener('click', () => navMenu.classList.remove('active'));
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
