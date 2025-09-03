@@ -6,10 +6,10 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --primary-dark: #1d4ed8;
-    --secondary-color: #10b981;
-    --accent-color: #f59e0b;
+    --primary-color: #2563eb; /* Azul primário */
+    --primary-dark: #1d4ed8; /* Azul mais escuro */
+    --secondary-color: #f59e0b; /* Laranja/Dourado (Âmbar) */
+    --accent-color: #ef4444; /* Vermelho (se for usar) */
     --text-color: #1f2937;
     --text-light: #6b7280;
     --background: #ffffff;
@@ -242,6 +242,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
+    /* Pattern de formas orgânicas suaves para dar um toque tecnológico sem ser agressivo */
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
     background-size: cover;
     z-index: -1;
@@ -312,6 +313,46 @@ section {
     color: var(--text-light);
 }
 
+/* Call to Action Overlay (Nova Seção) */
+.call-to-action-overlay {
+    position: relative;
+    padding: 6rem 0;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* Azul para Laranja/Dourado */
+    z-index: -2;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="25" cy="25" r="15" fill="%23ffffff" fill-opacity="0.05"/><circle cx="75" cy="75" r="15" fill="%23ffffff" fill-opacity="0.05"/><circle cx="75" cy="25" r="10" fill="%23ffffff" fill-opacity="0.03"/><circle cx="25" cy="75" r="10" fill="%23ffffff" fill-opacity="0.03"/></svg>'); /* Adiciona um padrão de círculos sutis */
+    background-size: 200px 200px; /* Ajusta o tamanho do padrão */
+    opacity: 0.9; /* Opacidade do fundo com gradiente e pattern */
+}
+
+.overlay-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.overlay-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.overlay-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
 /* Services Section */
 .service-cards {
     display: grid;
@@ -366,11 +407,33 @@ section {
 }
 
 /* Benefits Section */
+.benefits {
+    position: relative; /* Necessário para o overlay */
+    overflow: hidden; /* Garante que o SVG de fundo não vaze */
+    padding-top: 6rem; /* Ajuste para o padding, se necessário */
+    padding-bottom: 6rem; /* Ajuste para o padding, se necessário */
+}
+
+.benefits::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23e0e7ff" fill-opacity="0.3" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,229.3C840,235,960,213,1080,192C1200,171,1320,149,1380,138.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>') no-repeat top center; /* Uma onda sutil no topo */
+    background-size: cover;
+    opacity: 0.5; /* Suaviza a imagem de fundo */
+    z-index: -1;
+}
+
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    position: relative; /* Para que o conteúdo fique acima do background */
+    z-index: 1;
 }
 
 .benefit-item {
@@ -649,6 +712,10 @@ section {
     .contact-info-image {
         display: none;
     }
+
+    .overlay-content h2 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -670,6 +737,10 @@ section {
     
     section {
         padding: 3rem 0;
+    }
+
+    .overlay-content h2 {
+        font-size: 1.8rem;
     }
 }
 
